@@ -5,7 +5,8 @@ using UnityEngine;
 public class movePlayer : MonoBehaviour {
 
     public float movMulti;
-	// Use this for initialization
+    public GameObject TiroPrefab;
+
 	void Start () {
 		
 	}
@@ -14,5 +15,9 @@ public class movePlayer : MonoBehaviour {
 	void Update () {
         float posX = transform.position.x + Input.GetAxisRaw("Horizontal") * Time.deltaTime * movMulti;
         transform.position = new Vector3(Mathf.Clamp(posX, -10, 10), -4.3f, 0);
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Instantiate(TiroPrefab, transform.position, Quaternion.identity);
+        }
     }
 }
