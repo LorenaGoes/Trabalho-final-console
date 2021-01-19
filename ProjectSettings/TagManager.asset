@@ -6,6 +6,7 @@ TagManager:
   tags:
   - paredeDir
   - paredeEsq
+  - tiro
   layers:
   - Default
   - TransparentFX

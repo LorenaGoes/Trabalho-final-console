@@ -6,6 +6,7 @@ public class moveInimigos: MonoBehaviour {
     private float contMov = 0;
     gamemaneger gManager;
     GameObject inObj;
+    public int vida;
 
     // Use this for initialization
     void Start()
@@ -65,6 +66,16 @@ public class moveInimigos: MonoBehaviour {
         {
             gManager.bateuParede = false;
             gManager.desce = true;
+        }
+        else if (outro.gameObject.tag == "tiro")
+        {
+            Destroy(outro.gameObject);
+            vida--;
+
+            if (vida<=0)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }
