@@ -306,6 +306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 090356e88091fb64b9d39bb07be7e2d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: 6
 --- !u!212 &368413846
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -554,6 +555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 090356e88091fb64b9d39bb07be7e2d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: 6
 --- !u!50 &1012438728
 Rigidbody2D:
   serializedVersion: 4
@@ -881,6 +883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 090356e88091fb64b9d39bb07be7e2d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: 6
 --- !u!212 &2072690764
 SpriteRenderer:
   m_ObjectHideFlags: 0
