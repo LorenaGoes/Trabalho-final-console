@@ -13,10 +13,12 @@ public class movePlayer : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
         float posX = transform.position.x + Input.GetAxisRaw("Horizontal") * Time.deltaTime * movMulti;
         transform.position = new Vector3(Mathf.Clamp(posX, -10, 10), -4.3f, 0);
-        if (Input.GetButtonDown("Fire1"))
+
+        if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2") || Input.GetButtonDown("Fire3"))
         {
             Instantiate(TiroPrefab, transform.position, Quaternion.identity);
         }
