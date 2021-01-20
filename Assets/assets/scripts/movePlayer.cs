@@ -6,6 +6,7 @@ public class movePlayer : MonoBehaviour {
 
     public float movMulti;
     public GameObject TiroPrefab;
+    public int vida;
 
 	void Start () {
 		
@@ -18,6 +19,21 @@ public class movePlayer : MonoBehaviour {
         if (Input.GetButtonDown("Fire1"))
         {
             Instantiate(TiroPrefab, transform.position, Quaternion.identity);
+        }
+    }
+
+    void OnTriggerEnter2D (Collider2D outro)
+    {
+        if (outro.gameObject.tag == "tiroinimigo")
+        {
+            Destroy(outro.gameObject);
+            vida--;
+
+            if (vida <= 0)
+            {
+                Destroy(gameObject);
+            }
+
         }
     }
 }

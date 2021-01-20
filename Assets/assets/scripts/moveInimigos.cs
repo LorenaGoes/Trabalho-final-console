@@ -7,6 +7,7 @@ public class moveInimigos: MonoBehaviour {
     gamemaneger gManager;
     GameObject inObj;
     public int vida;
+    public GameObject tiro;
 
     // Use this for initialization
     void Start()
@@ -51,6 +52,11 @@ public class moveInimigos: MonoBehaviour {
                     gManager.desce = false;
                     contMov = 0;
                 }
+            }
+
+            if (Random.Range(0f, 1f) > 0.5f)
+            {
+                Instantiate(tiro, transform.position, Quaternion.identity);
             }
         }
     }
